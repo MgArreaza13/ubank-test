@@ -15,10 +15,20 @@
   <ng-container>
     <app-home-slide [detailsArray]="detailsArray"></app-home-slide>
   </ng-container>
-  <ng-container>
-    <app-home-details [rulesArray]="rulesArray"></app-home-details>
-  </ng-container>
-
+  <ion-card class="bg-transparent">
+    <div class="ion-padding">
+      <div class="d-block">
+        <canvas baseChart
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [options]="barChartOptions"
+          [plugins]="barChartPlugins"
+          [legend]="barChartLegend"
+          [chartType]="barChartType">
+        </canvas>
+      </div>          
+    </div>
+  </ion-card>
 
 
 </ion-content>

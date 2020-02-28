@@ -5,11 +5,12 @@ ion-card.card-list{
     border-radius: 9px;
     display: flex;
     justify-content: space-around;
-    span{
-        display: flex;
-        align-items: center;
+    ion-col{
+        display: flex;        
+        justify-content: center;
+        flex-direction: column;
         ion-icon{
-            font-size: 9vw;
+            font-size: 15vw;
         }
     }
 }

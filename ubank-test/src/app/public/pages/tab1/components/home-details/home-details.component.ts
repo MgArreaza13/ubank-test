@@ -6,7 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./home-details.component.scss'],
 })
 export class HomeDetailsComponent implements OnInit {
-
+  slideOpts = {
+    slidesPerView: 1.5,
+  }
   @Input() rulesArray: any;
   constructor() { }
 
