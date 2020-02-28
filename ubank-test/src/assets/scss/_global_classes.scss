@@ -7,6 +7,9 @@
 .text-center {
   text-align: center;
 }
+.text-right{
+  text-align: right;
+}
 .d-flex {
   display: flex;
 }
@@ -139,7 +142,7 @@
   margin: 0 auto;
 }
 .font-small {
-  font-size: small;
+  font-size: small !important;
 }
 .font-large {
   font-size: large;

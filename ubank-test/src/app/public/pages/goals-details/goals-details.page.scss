@@ -1,0 +1,12 @@
+ion-header{
+    height: 120px;
+    border-bottom-left-radius: 60px;
+}
+ion-card.card-detail{
+    background: blanchedalmond;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    flex-direction: column;    
+}
