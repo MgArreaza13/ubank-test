@@ -21,7 +21,13 @@ const routes: Routes = [
   {
     path: 'goals-list',
     loadChildren: () => import('./public/pages/goals-list/goals-list.module').then( m => m.GoalsListPageModule)
+  },
+  {
+    path: 'menu',
+    loadChildren: () => import('./public/pages/menu/menu.module').then( m => m.MenuPageModule)
+
   }
+
 
 
 ];

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -50,9 +51,13 @@ export class Tab1Page {
 
 
 
-  constructor() { }
+  constructor(
+    private navCtrl: NavController,
+  ) { }
 
 
-
+  openMenu() {
+    this.navCtrl.navigateRoot('/menu');
+  }
 
 }
