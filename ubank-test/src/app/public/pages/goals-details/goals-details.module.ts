@@ -1,0 +1,23 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
+import { IonicModule } from '@ionic/angular';
+
+import { GoalsDetailsPageRoutingModule } from './goals-details-routing.module';
+
+import { GoalsDetailsPage } from './goals-details.page';
+import { OneGoalDetailsPageModule } from '../one-goal-details/one-goal-details.module';
+
+
+@NgModule({
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    GoalsDetailsPageRoutingModule,
+    OneGoalDetailsPageModule,
+  ],
+  declarations: [GoalsDetailsPage]
+})
+export class GoalsDetailsPageModule {}

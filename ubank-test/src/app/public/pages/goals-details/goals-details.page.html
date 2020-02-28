@@ -1,0 +1,61 @@
+<ion-header class="ion-no-border bg-gradient-orange">  
+  <ion-toolbar class="bg-transparent">  
+      <ion-buttons slot="start">
+        <ion-button>
+          <ion-icon slot="icon-only" name="arrow-back" color="light"></ion-icon>
+        </ion-button>       
+      </ion-buttons>      
+      <ion-title size="small"  color="light">Goals details</ion-title>    
+  </ion-toolbar>
+  <ion-toolbar class="bg-transparent">    
+    <ion-title color="light" size="small" class="text-right">Here you can visualize your details of goals</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="bgi-solid-blue">
+  <ion-list class="bg-transparent">
+    <ion-item lines="none" color="transparent">
+      <ion-card class="full-w card-detail">              
+        <ion-row class="align-item-center">
+          <ion-chip>
+            <ion-icon name="football" color="medium"></ion-icon>
+            <ion-label class="font-small">Real Madrid</ion-label>          
+          </ion-chip>  
+          <span class="d-flex">
+            <strong class="font-large">1</strong>
+            <strong> - </strong>
+            <strong class="font-large">0</strong>
+          </span>
+          <ion-chip>
+            <ion-icon name="football" color="medium"></ion-icon>
+            <ion-label class="font-small">FC Barcelona</ion-label>          
+          </ion-chip>
+        </ion-row>
+        <ion-row class="full-w">
+          <ion-list class="full-w m-0 p-0 bg-transparent">
+            <ion-item color="transparent" class="full-w" lines="none">            
+              <ion-label class="font-small">Real Madrid</ion-label>              
+              <ion-label class="font-small text-center">Gol <ion-badge color="danger">5</ion-badge></ion-label>              
+              <ion-badge slot="end" color="success">$22,00</ion-badge>
+            </ion-item>
+            <ion-item color="transparent" class="full-w" lines="none">            
+              <ion-label class="font-small">Real Madrid</ion-label>              
+              <ion-label class="font-small text-center">Gol <ion-badge color="danger">5</ion-badge></ion-label>              
+              <ion-badge slot="end" color="success">$22,00</ion-badge>
+            </ion-item>
+            <ion-item color="transparent" class="full-w" lines="none">            
+              <ion-label class="font-small">Real Madrid</ion-label>              
+              <ion-label class="font-small text-center">Gol <ion-badge color="danger">5</ion-badge></ion-label>              
+              <ion-badge slot="end" color="success">$22,00</ion-badge>
+            </ion-item>
+            <ion-item color="transparent" class="full-w" lines="none">            
+              <ion-label class="font-small">Real Madrid</ion-label>              
+              <ion-label class="font-small text-center">Gol <ion-badge color="danger">5</ion-badge></ion-label>              
+              <ion-badge slot="end" color="success">$22,00</ion-badge>
+            </ion-item>            
+          </ion-list>          
+        </ion-row>
+        <ion-button size="small" class="bgi-gradient-orange" (click)="presentDetail()">Show more</ion-button>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>

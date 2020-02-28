@@ -21,12 +21,21 @@ const routes: Routes = [
   {
     path: 'menu',
     loadChildren: () => import('./public/pages/menu/menu.module').then( m => m.MenuPageModule)
-
   },
   {
     path: 'ruler-create',
     loadChildren: () => import('./public/pages/ruler-create/ruler-create.module').then( m => m.RulerCreatePageModule)
+  },
+  {
+    path: 'goals-details',
+    loadChildren: () => import('./public/pages/goals-details/goals-details.module').then( m => m.GoalsDetailsPageModule)
+  },
+  {
+    path: 'one-goal-details',
+    loadChildren: () => import('./public/pages/one-goal-details/one-goal-details.module').then( m => m.OneGoalDetailsPageModule)
   }
+
+
 
 
 
