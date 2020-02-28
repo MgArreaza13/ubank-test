@@ -1,0 +1,9 @@
+<h3 class="white-font">Mis metas</h3>
+<ion-list class="bg-transparent">
+  <ng-container *ngFor="let rule of rulesArray" >
+    <app-home-details-card [dataCard]="rule"></app-home-details-card>
+  </ng-container>
+  <ng-container>
+    <app-home-details-card-add></app-home-details-card-add>
+  </ng-container>
+</ion-list>

@@ -1,0 +1,27 @@
+<ion-slides [options]="slideOpts">
+  <ng-container *ngFor="let slide of detailsArray" >
+    <app-home-slide-card [dataSlide]="slide"></app-home-slide-card>
+  </ng-container>
+  <!-- <ion-slide>
+    <ion-card class="bg-gradient-purple">
+      <ion-item lines="none" color="transparent">
+        <ion-icon name="ribbon" slot="start" color="light"></ion-icon>
+        <ion-button fill="outline" slot="end" color="light"></ion-button>
+      </ion-item>
+      <ion-item lines="none" color="transparent">
+        <h1 class="white-font">$5000,00</h1>
+      </ion-item>
+    </ion-card>
+  </ion-slide>
+  <ion-slide>
+    <ion-card class="bg-gradient-pink">
+      <ion-item lines="none" color="transparent">
+        <ion-icon name="ribbon" slot="start" color="light"></ion-icon>
+        <ion-button fill="outline" slot="end" color="light"></ion-button>
+      </ion-item>
+      <ion-item lines="none" color="transparent">
+        <h1 class="white-font">$5000,00</h1>
+      </ion-item>
+    </ion-card>
+  </ion-slide> -->
+</ion-slides>
