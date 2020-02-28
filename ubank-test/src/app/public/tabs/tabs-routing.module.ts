@@ -23,7 +23,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../pages/tab2/tab2.module').then(m => m.Tab2PageModule)
+              import('../pages/goals-details/goals-details.module').then(m =>  m.GoalsDetailsPageModule)
           }
         ]
       },

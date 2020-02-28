@@ -1,0 +1,23 @@
+<ion-row class="full-w">
+  <ion-list class="full-w m-0 p-0 bg-transparent">
+    <!-- to play -->
+
+    <ng-container *ngFor="let result of results" >
+      <ion-item *ngIf="data.event === 'To play' && result.status == 'FINISHED'"  color="transparent" class="full-w" lines="none">            
+        <ion-label class="font-small"> JUGAR: ahorrado <ion-badge color="success">{{ data.saving }}</ion-badge> por jugar
+          el día {{ result.utcDate | date }}
+        </ion-label>              
+      </ion-item>          
+    </ng-container>
+
+
+    <!-- to win -->
+    <ng-container *ngFor="let result of results" >
+      <ion-item *ngIf="data.event === 'Win' && result.score.winner == getIfIsWinner(data.id, result) && result.status == 'FINISHED'"  color="transparent" class="full-w" lines="none">            
+        <ion-label class="font-small"> GANAR: ahorrado <ion-badge color="success">{{ data.saving }}</ion-badge> por ganar
+          el día {{ result.utcDate | date }}
+        </ion-label>  
+      </ion-item>          
+    </ng-container>
+  </ion-list>          
+</ion-row>

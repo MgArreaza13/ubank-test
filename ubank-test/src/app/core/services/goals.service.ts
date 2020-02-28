@@ -5,26 +5,7 @@ import { Goal } from 'src/app/shared/models/goal';
 @Injectable()
 export class GoalsService {
 
-  public goals: Array<Goal> = [
-    {
-      id: "7oQ8cc4kwLG0LF3g",
-      type: 'Travel',
-      date: "2020-02-28T14:48:14.615-04:00",
-      mount: '2000'
-    },
-    {
-      id: "8oQ8cc4kwLG0LF3g",
-      type: 'Travel 2',
-      date: "2020-02-28T14:48:14.615-04:00",
-      mount: '2000'
-    },
-    {
-      id: "9oQ8cc4kwLG0LF3g",
-      type: 'Travel 3',
-      date: "2020-02-28T14:48:14.615-04:00",
-      mount: '2000'
-    }
-  ];
+  public goals: Array<Goal> = [];
 
 
   constructor() { }

@@ -1,0 +1,16 @@
+<ion-item lines="none" color="transparent">
+  <ion-card class="full-w card-detail"> 
+    <h2>{{dataRuler.event}}</h2>             
+    <ion-row class="align-item-center">
+      <ion-chip>
+        <ion-icon name="football" color="medium"></ion-icon>
+        <ion-label class="font-small">{{dataRuler.teamName}}</ion-label>          
+      </ion-chip>  
+    </ion-row>
+    
+    <ng-container *ngIf="dataRuler" >
+      <app-goals-details-result [data]="dataRuler"></app-goals-details-result>
+    </ng-container>
+    <ion-button size="small" class="bgi-gradient-orange" (click)="presentDetail()">Show more</ion-button>
+  </ion-card>
+</ion-item>

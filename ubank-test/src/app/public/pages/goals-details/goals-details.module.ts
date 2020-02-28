@@ -8,6 +8,8 @@ import { GoalsDetailsPageRoutingModule } from './goals-details-routing.module';
 
 import { GoalsDetailsPage } from './goals-details.page';
 import { OneGoalDetailsPageModule } from '../one-goal-details/one-goal-details.module';
+import { GoalsDetailsCardComponent } from './components/goals-details-card/goals-details-card.component';
+import { GoalsDetailsResultComponent } from './components/goals-details-result/goals-details-result.component';
 
 
 @NgModule({
@@ -18,6 +20,6 @@ import { OneGoalDetailsPageModule } from '../one-goal-details/one-goal-details.m
     GoalsDetailsPageRoutingModule,
     OneGoalDetailsPageModule,
   ],
-  declarations: [GoalsDetailsPage]
+  declarations: [GoalsDetailsPage, GoalsDetailsCardComponent, GoalsDetailsResultComponent]
 })
 export class GoalsDetailsPageModule {}
