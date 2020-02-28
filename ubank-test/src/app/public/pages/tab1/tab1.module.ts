@@ -11,6 +11,7 @@ import { HomeSlideCardComponent } from './components/home-slide-card/home-slide-
 import { HomeDetailsComponent } from './components/home-details/home-details.component';
 import { HomeDetailsCardComponent } from './components/home-details-card/home-details-card.component';
 import { HomeDetailsCardAddComponent } from './components/home-details-card-add/home-details-card-add.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { HomeDetailsCardAddComponent } from './components/home-details-card-add/
     CommonModule,
     FormsModule,
     SharedModule,
-    RouterModule.forChild([{ path: '', component: Tab1Page }])
+    RouterModule.forChild([{ path: '', component: Tab1Page }]),
+    ChartsModule,
   ],
   declarations: [
     Tab1Page, 

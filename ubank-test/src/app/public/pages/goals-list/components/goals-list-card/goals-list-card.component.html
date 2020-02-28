@@ -1,14 +1,13 @@
 <ion-item lines="none" color="transparent">
   <ion-card class="full-w card-list">
-    <span>
+    <ion-col size="6">
       <ion-icon name="football"></ion-icon>
-    </span>
-    <section>
+    </ion-col>
+    <ion-col size="6">
       <strong>{{goal.type}}</strong>
       <small class="d-block">{{goal.date | date}}</small>
       <ion-progress-bar color="secondary" value="0.5"></ion-progress-bar>
       <strong class="d-block">${{goal.mount}}</strong>
-    </section>
+    </ion-col>
   </ion-card>
 </ion-item>
-
