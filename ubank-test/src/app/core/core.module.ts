@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 
 
 // Services
+import { GoalsService } from './services/goals.service';
 
 
 @NgModule({
@@ -21,7 +22,7 @@ import { CommonModule } from '@angular/common';
   exports: [
   ],
   providers: [
-   
+    GoalsService
   ],
 })
 export class CoreModule {}
