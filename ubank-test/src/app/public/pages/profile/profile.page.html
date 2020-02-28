@@ -1,9 +1,37 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>profile</ion-title>
+<ion-header class="ion-no-border bg-gradient-orange">  
+  <ion-toolbar class="bg-transparent">  
+      <ion-buttons slot="start">
+        <ion-button>
+          <ion-icon slot="icon-only" name="arrow-back" color="light"></ion-icon>
+        </ion-button>       
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button color="secondary">
+          <ion-icon slot="icon-only"  name="settings" color="light"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title size="small"  color="light">My profile</ion-title>    
   </ion-toolbar>
 </ion-header>
+<ion-content class="bgi-solid-blue">
+  <section class="bg-gradient-orange img-profile">
+    <ion-avatar>
+      <img src="https://bashooka.com/wp-content/uploads/2017/08/profile-ui-inspiration-29.jpg">
+    </ion-avatar>
+  </section>
+  <ion-row class="ion-padding">
+    <h3 class="white-font full-w text-center">Michael Kors</h3>
+    <h5 class="white-font full-w text-center">mk@example.com</h5>
+  </ion-row>
+  <ion-row class="ion-padding">
+    <ion-col size="6">
+      <h5 class="white-font full-w text-center">20/01/2020</h5>
+      <small class="white-font full-w text-center d-block bb-white">Register date</small>
+    </ion-col>
+    <ion-col size="6">
+      <h5 class="white-font full-w text-center ">$10.000,00</h5>
+      <small class="white-font full-w text-center d-block bb-white">Amount saved</small>
+    </ion-col>
 
-<ion-content>
-
+  </ion-row>
 </ion-content>

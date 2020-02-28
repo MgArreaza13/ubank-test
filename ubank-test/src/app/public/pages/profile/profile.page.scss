@@ -1,0 +1,17 @@
+ion-header{
+    height: 15vh;   
+}
+section.img-profile{
+    display: flex;
+    justify-content: center;
+    ion-avatar{
+        position: relative;
+        top: 2rem;
+        width: 22vw;
+        height: 22vw;
+        border: 2px solid white;
+    }
+}
+.bb-white{
+    border-bottom: 1px solid #ffffff59;
+}
