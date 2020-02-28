@@ -1,4 +1,6 @@
+import { GoalsService } from './../../../core/services/goals.service';
 import { Component, OnInit } from '@angular/core';
+import { Goal } from 'src/app/shared/models/goal';
 
 @Component({
   selector: 'app-goal-create',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GoalCreatePage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private goalsService: GoalsService
+  ) { }
 
   ngOnInit() {
+    console.log(this.goalsService.getGoals());    
   }
+
+
+  addGoal(){
+    const goal: Goal = {
+      id: 'string',
+      type: 'string',
+      date: 'string',
+      mount: '2000'
+    }
+    this.goalsService.addGoals(goal);
+    console.log(this.goalsService.getGoals());
+  }
+
+
 
 }

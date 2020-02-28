@@ -31,26 +31,7 @@
           <ion-label position="stacked">Mount</ion-label>
           <ion-input clearInput value="" placeholder="$"></ion-input>
         </ion-item>
-        <ion-item>
-          <ion-label>Type of goal</ion-label>
-          <ion-select value="brown" okText="Okay" cancelText="Dismiss">
-            <ion-select-option value="brown">Travel</ion-select-option>
-            <ion-select-option value="blonde">Do something</ion-select-option>
-            <ion-select-option value="black">Buy something</ion-select-option>
-            <ion-select-option value="red">Save money</ion-select-option>
-          </ion-select>
-        </ion-item>
-        <ion-item>
-          <ion-label>Rules</ion-label>
-          <ion-select value="brown" okText="Okay" cancelText="Dismiss">
-            <ion-select-option value="brown">Rule 1</ion-select-option>
-            <ion-select-option value="blonde">Rule 2</ion-select-option>
-            <ion-select-option value="black">Rule 3</ion-select-option>
-            <ion-select-option value="red"> Rule 4</ion-select-option>
-            <ion-select-option >Add rules </ion-select-option>            
-          </ion-select>
-        </ion-item>
-        <ion-button size="sm" class="bgi-gradient-orange m-2 float-r" >Add</ion-button>
+        <ion-button size="sm" class="bgi-gradient-orange m-2 float-r" (click)="addGoal()"  >Add</ion-button>
       </ion-list>
     </ion-card>
   </form>
