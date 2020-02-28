@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar class="bgi-solid-blue">
     <ion-buttons slot="start">      
-      <ion-button color="light">
+      <ion-button (click)="goToHome()"  color="light">
         <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -23,5 +23,13 @@
   <ng-container *ngIf="rules.length == 0" >
     <app-no-register-yet [componentName]="'rules'"></app-no-register-yet>
   </ng-container>
+
+
   
 </ion-content>
+
+<ion-footer>
+  <ion-button (click)="goToNewRuler()"  class="bgi-gradient-orange" size="medium" expand="block"> 
+    New Ruler
+  </ion-button>
+</ion-footer>

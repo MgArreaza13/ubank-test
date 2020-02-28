@@ -17,6 +17,9 @@ import { GoalsService } from './services/goals.service';
 import { RulesService } from './services/rules.service';
 import { LoadingService } from './services/loader.service';
 import { ToastService } from './services/toast.service';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TeamsService } from './services/teams.service';
 
 
 @NgModule({
@@ -26,6 +29,8 @@ import { ToastService } from './services/toast.service';
   exports: [
   ],
   providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    TeamsService,
     GoalsService,
     RulesService,
     UtilService,

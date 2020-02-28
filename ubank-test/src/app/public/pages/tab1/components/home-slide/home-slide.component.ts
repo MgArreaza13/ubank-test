@@ -23,7 +23,6 @@ export class HomeSlideComponent implements OnInit {
    }
 
   ngOnInit() {
-    console.log(this.detailsArray);
   }
 
 }

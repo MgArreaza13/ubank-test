@@ -11,10 +11,6 @@ const routes: Routes = [
     loadChildren: () => import('./public/pages/goal-create/goal-create.module').then( m => m.GoalCreatePageModule)
   },
   {
-    path: 'profile',
-    loadChildren: () => import('./public/pages/profile/profile.module').then( m => m.ProfilePageModule)
-  },
-  {
     path: 'rules-list',
     loadChildren: () => import('./public/pages/rules-list/rules-list.module').then( m => m.RulesListPageModule)
   },
@@ -26,6 +22,10 @@ const routes: Routes = [
     path: 'menu',
     loadChildren: () => import('./public/pages/menu/menu.module').then( m => m.MenuPageModule)
 
+  },
+  {
+    path: 'ruler-create',
+    loadChildren: () => import('./public/pages/ruler-create/ruler-create.module').then( m => m.RulerCreatePageModule)
   }
 
 

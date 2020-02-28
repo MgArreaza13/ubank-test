@@ -41,25 +41,11 @@ export class GoalCreatePage implements OnInit {
     });
    }
 
-  ngOnInit() {
-    console.log(this.goalsService.getGoals());    
+  ngOnInit() { 
   }
 
 
   get f() { return this.goalForm.controls; }
-
-  addGoal(){
-    const goal: Goal = {
-      id: 'string',
-      type: 'string',
-      date: 'string',
-      mount: '2000'
-    }
-    this.goalsService.addGoals(goal);
-    console.log(this.goalsService.getGoals());
-  }
-
-
 
 
 
@@ -87,7 +73,12 @@ export class GoalCreatePage implements OnInit {
       await this.loadingService.dismiss();
       this.toastService.showToast(message);
     })
-    .catch(async error => {console.log(error); this.toastService.showToastError('error try again'); await this.loadingService.dismiss();})
+    .catch(async error => {console.log(error); this.toastService.showToastError(error); await this.loadingService.dismiss();})
     
+  }
+
+
+  goToListGoals(){
+    this.router.navigate(['/goals-list']);
   }
 }

@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  public menu = [
+    {
+      title: 'List Rules',
+      url:'/rules-list'
+    },
+    {
+      title: 'List Goals',
+      url:'/goals-list'
+    }
+  ]
+
 
   ngOnInit() {
+  }
+
+
+  redirect(url){
+    this.router.navigate([url]);
+  }
+
+
+  goToHome(){
+    this.router.navigate(['/tabs/tab1'])
   }
 
 }

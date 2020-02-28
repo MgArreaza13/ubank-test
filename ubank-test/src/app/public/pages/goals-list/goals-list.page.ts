@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { GoalsService } from './../../../core/services/goals.service';
 import { Component, OnInit } from '@angular/core';
 import { Goal } from 'src/app/shared/models/goal';
@@ -11,7 +12,8 @@ export class GoalsListPage implements OnInit {
 
   goals: Array<Goal> = [];
   constructor(
-    private goalsService: GoalsService
+    private goalsService: GoalsService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -24,6 +26,15 @@ export class GoalsListPage implements OnInit {
    */
   getGoals(){
     this.goals = this.goalsService.getGoals();
+  }
+
+
+  goToHome(){
+    this.router.navigate(['/tabs/tab1'])
+  }
+
+  goToNewGoal(){
+    this.router.navigate(['/goal-create'])
   }
 
 }

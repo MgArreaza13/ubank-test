@@ -15,4 +15,9 @@ export class TeamsService {
   getScheduledTeam(id?){
     return this.http.get(`https://api.football-data.org/v2/teams/86/matches?season=2019/matches?status=FINISHED`);
   }
+
+
+  getTeams(){
+    return this.http.get('https://api.football-data.org/v2/competitions/CL/teams');
+  }
 }

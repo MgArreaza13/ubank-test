@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar class="bgi-solid-blue">
     <ion-buttons slot="start">      
-      <ion-button color="light">
+      <ion-button (click)="goToHome()"  color="light">
         <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -25,3 +25,11 @@
   </ng-container>
   
 </ion-content>
+
+
+
+<ion-footer>
+  <ion-button (click)="goToNewGoal()" class="bgi-gradient-orange" size="medium" expand="block"> 
+    New Goal
+  </ion-button>
+</ion-footer>

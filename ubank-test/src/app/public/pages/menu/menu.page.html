@@ -2,7 +2,7 @@
   <ion-header>
     <ion-toolbar color="transparent">
       <ion-buttons slot="end">
-        <ion-button>
+        <ion-button (click)="goToHome()" >
           <ion-icon slot="icon-only" name="close" color="light"></ion-icon>
         </ion-button>        
       </ion-buttons>
@@ -11,7 +11,9 @@
   </ion-header>
   <ion-content class="bg-transparent ion-padding">
     <ion-list class="bg-transparent">
-      <ion-item color="transparent" class="white-font">Menu Item</ion-item>      
+      <ng-container *ngFor="let item of menu" >
+        <ion-item (click)="redirect(item.url)"  color="transparent" class="white-font">{{item.title}}</ion-item>
+      </ng-container>      
     </ion-list>
   </ion-content>
 </ion-content>

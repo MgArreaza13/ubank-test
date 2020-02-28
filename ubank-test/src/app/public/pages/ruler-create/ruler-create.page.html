@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar class="bgi-solid-blue">
+    <ion-buttons slot="start">
+      <ion-button (click)="goToListRules()" color="light">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title color="light">Add your ruler</ion-title>
+  </ion-toolbar>
+</ion-header>
+<span class="full-w line bg-gradient-orange"></span>
+<ion-content class="ion-padding bgi-solid-blue">
+  <form style="display: contents;" [formGroup]="rulerForm" (ngSubmit)="onSubmit()">
+    <h3 class="full-w white-font text-center">New ruler</h3>
+    <ion-card class="p-1">
+      <ion-list>
+        <ion-item>
+          <ion-label>Select Goal</ion-label>
+          <ion-select formControlName="goal" [ngClass]="{ 'is-invalid': submitted && f['goal'].errors }" okText="Okay"
+            cancelText="Dismiss">
+            <ng-container *ngFor="let goal of goals" >
+              <ion-select-option [value]="goal.id" value="{{goal.id}}">{{goal.type}}</ion-select-option>
+            </ng-container>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label>Select Team</ion-label>
+          <ion-select formControlName="team" [ngClass]="{ 'is-invalid': submitted && f['team'].errors }" okText="Okay"
+            cancelText="Dismiss">
+           <ng-container *ngFor="let team of teams" >
+            <ion-select-option [value]="team.id" value="{{team.id}}">{{team.name}}</ion-select-option>
+           </ng-container>
+          </ion-select>
+        </ion-item>
+        <label class="errorcls" *ngIf="f['team'].hasError('required') && (f['team'].touched || f['team'].dirty)">El
+          campo es
+          requerido</label>
+          <ion-item>
+            <ion-label>Select Event</ion-label>
+            <ion-select formControlName="event" [ngClass]="{ 'is-invalid': submitted && f['event'].errors }" okText="Okay"
+              cancelText="Dismiss">
+              <ion-select-option [value]="'To play'" value="To play">To play</ion-select-option>
+              <ion-select-option [value]="'Win'" value="Win">Win</ion-select-option>
+              <ion-select-option [value]="'For each gol'" value="For each gol">For each gol</ion-select-option>
+            </ion-select>
+          </ion-item>
+        <label class="errorcls" *ngIf="f['event'].hasError('required') && (f['event'].touched || f['event'].dirty)">El
+          campo es
+          requerido</label>
+        <ion-item>
+          <ion-label position="stacked">Savings</ion-label>
+          <ion-input [ngClass]="{ 'is-invalid': submitted && f['saving'].errors }" formControlName="saving" clearInput
+            value="" placeholder="$"></ion-input>
+        </ion-item>
+        <label class="errorcls" *ngIf="f['saving'].hasError('required') && (f['saving'].touched || f['saving'].dirty)">El
+          campo es
+          requerido</label>
+        <ion-button size="sm" class="bgi-gradient-orange m-2 float-r" [disabled]="!rulerForm.valid" type="submit">Add
+        </ion-button>
+      </ion-list>
+    </ion-card>
+  </form>
+</ion-content>
