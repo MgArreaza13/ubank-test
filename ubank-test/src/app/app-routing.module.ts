@@ -9,7 +9,16 @@ const routes: Routes = [
   {
     path: 'goal-create',
     loadChildren: () => import('./public/pages/goal-create/goal-create.module').then( m => m.GoalCreatePageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./public/pages/profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'rules-list',
+    loadChildren: () => import('./public/pages/rules-list/rules-list.module').then( m => m.RulesListPageModule)
   }
+
 
 ];
 @NgModule({
