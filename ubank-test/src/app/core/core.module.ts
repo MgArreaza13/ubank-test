@@ -1,3 +1,4 @@
+import { UtilService } from './services/util.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -13,6 +14,9 @@ import { CommonModule } from '@angular/common';
 
 // Services
 import { GoalsService } from './services/goals.service';
+import { RulesService } from './services/rules.service';
+import { LoadingService } from './services/loader.service';
+import { ToastService } from './services/toast.service';
 
 
 @NgModule({
@@ -22,7 +26,11 @@ import { GoalsService } from './services/goals.service';
   exports: [
   ],
   providers: [
-    GoalsService
+    GoalsService,
+    RulesService,
+    UtilService,
+    LoadingService,
+    ToastService
   ],
 })
 export class CoreModule {}

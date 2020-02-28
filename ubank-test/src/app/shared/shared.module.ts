@@ -1,3 +1,4 @@
+import { CoreModule } from './../core/core.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -12,23 +13,29 @@ import { ExploreContainerComponentModule } from './components/explore-container/
 
 // Components
 import { ExploreContainerComponent } from './components/explore-container/explore-container.component';
+import { NoRegisterYetComponent } from './components/no-register-yet/no-register-yet.component';
+import { IonicModule } from '@ionic/angular';
 
 
 @NgModule({
+  declarations: [
+    NoRegisterYetComponent
+  ],
   imports: [
+    IonicModule,
     CommonModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    ExploreContainerComponentModule
+    ExploreContainerComponentModule,
   ],
   exports: [
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    ExploreContainerComponentModule
+    ExploreContainerComponentModule,
+    NoRegisterYetComponent
   ],
-  declarations: [
-  ],
+  
 })
 export class SharedModule {}

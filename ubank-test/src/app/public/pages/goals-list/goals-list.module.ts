@@ -5,10 +5,10 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { RulesListPageRoutingModule } from './rules-list-routing.module';
+import { GoalsListPageRoutingModule } from './goals-list-routing.module';
 
-import { RulesListPage } from './rules-list.page';
-import { RulesListCardComponent } from './components/rules-list-card/rules-list-card.component';
+import { GoalsListPage } from './goals-list.page';
+import { GoalsListCardComponent } from './components/goals-list-card/goals-list-card.component';
 
 @NgModule({
   imports: [
@@ -16,8 +16,8 @@ import { RulesListCardComponent } from './components/rules-list-card/rules-list-
     FormsModule,
     IonicModule,
     SharedModule,
-    RulesListPageRoutingModule
+    GoalsListPageRoutingModule
   ],
-  declarations: [RulesListPage, RulesListCardComponent]
+  declarations: [GoalsListPage, GoalsListCardComponent]
 })
-export class RulesListPageModule {}
+export class GoalsListPageModule {}

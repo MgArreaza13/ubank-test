@@ -17,6 +17,10 @@ const routes: Routes = [
   {
     path: 'rules-list',
     loadChildren: () => import('./public/pages/rules-list/rules-list.module').then( m => m.RulesListPageModule)
+  },
+  {
+    path: 'goals-list',
+    loadChildren: () => import('./public/pages/goals-list/goals-list.module').then( m => m.GoalsListPageModule)
   }
 
 

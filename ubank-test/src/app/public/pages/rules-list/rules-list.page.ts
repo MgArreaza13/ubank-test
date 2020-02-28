@@ -1,4 +1,6 @@
+import { RulesService } from './../../../core/services/rules.service';
 import { Component, OnInit } from '@angular/core';
+import { Ruler } from 'src/app/shared/models/ruler';
 
 @Component({
   selector: 'app-rules-list',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RulesListPage implements OnInit {
 
-  constructor() { }
+  rules: Array<Ruler> = [];
+
+  constructor(
+    private rulesServices: RulesService
+  ) { }
 
   ngOnInit() {
+    this.getRules();
   }
 
+
+
+  /**
+   * get rules from service
+   */
+  getRules() {
+    this.rules = this.rulesServices.getRules();
+  }
 }

@@ -15,7 +15,7 @@ export class GoalsService {
   /**
    * return list goals
    */
-  public getGoals() : Array<Goal>{
+  public getGoals(): Array<Goal> {
     return this.goals;
   }
 
@@ -24,9 +24,12 @@ export class GoalsService {
    * add new Goal
    * @param goal type Goal
    */
-  public addGoals(goal: Goal){
-    this.goals.push(goal);
-    return true;
+  public addGoals(goal: Goal) {
+    return new Promise((resolve)=>{
+      this.goals.push(goal);
+      resolve('New Goals Registered')
+  });
+
   }
 
 

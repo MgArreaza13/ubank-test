@@ -10,28 +10,37 @@
 </ion-header>
 <span class="full-w line bg-gradient-orange"></span>
 <ion-content class="ion-padding bgi-solid-blue">  
-  <form style="display: contents;">
+  <form style="display: contents;" [formGroup]="goalForm" (ngSubmit)="onSubmit()">
     <h3 class="full-w white-font text-center">New Goal</h3>
     <ion-card class="p-1">
       <ion-list>
         <ion-item>
           <ion-label>Type of goal</ion-label>
-          <ion-select value="brown" okText="Okay" cancelText="Dismiss">
-            <ion-select-option value="brown">Travel</ion-select-option>
-            <ion-select-option value="blonde">Do something</ion-select-option>
-            <ion-select-option value="black">Buy something</ion-select-option>
-            <ion-select-option value="red">Save money</ion-select-option>
+          <ion-select formControlName="type" [ngClass]="{ 'is-invalid': submitted && f['type'].errors }" okText="Okay" cancelText="Dismiss">
+            <ion-select-option [value]="'Travel'" value="Travel">Travel</ion-select-option>
+            <ion-select-option [value]="'Do something'" value="Do something">Do something</ion-select-option>
+            <ion-select-option [value]="'Buy something'" value="Buy something">Buy something</ion-select-option>
+            <ion-select-option [value]="'Save money'" value="Save money">Save money</ion-select-option>
           </ion-select>
+          <label class="errorcls"
+            *ngIf="f['type'].hasError('required') && (f['type'].touched || f['type'].dirty)">El campo es
+            requerido</label>
         </ion-item>
         <ion-item>
           <ion-label>Date</ion-label>
-          <ion-datetime displayFormat="MM DD YYYY" placeholder="Select Date"></ion-datetime>
+          <ion-datetime formControlName="date"  [ngClass]="{ 'is-invalid': submitted && f['date'].errors }" displayFormat="MM DD YYYY" placeholder="Select Date"></ion-datetime>
+          <label class="errorcls"
+          *ngIf="f['date'].hasError('required') && (f['date'].touched || f['date'].dirty)">El campo es
+          requerido</label>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Mount</ion-label>
-          <ion-input clearInput value="" placeholder="$"></ion-input>
+          <ion-input [ngClass]="{ 'is-invalid': submitted && f['mount'].errors }" formControlName="mount" clearInput value="" placeholder="$"></ion-input>
+          <label class="errorcls"
+            *ngIf="f['mount'].hasError('required') && (f['mount'].touched || f['mount'].dirty)">El campo es
+            requerido</label>
         </ion-item>
-        <ion-button size="sm" class="bgi-gradient-orange m-2 float-r" (click)="addGoal()"  >Add</ion-button>
+        <ion-button size="sm" class="bgi-gradient-orange m-2 float-r" type="submit" >Add</ion-button>
       </ion-list>
     </ion-card>
   </form>

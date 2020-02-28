@@ -5,23 +5,23 @@
         <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title color="light">Rules list</ion-title>
+    <ion-title color="light">Goals list</ion-title>
   </ion-toolbar>
   <ion-toolbar class="bg-transparent">    
     <ion-title color="light" size="small">Here you can visualize your goals</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content class="bgi-solid-blue ion-padding">       
-   <ion-title size="large" color="light">Your rules</ion-title>
-   <ion-list class="full-w bg-transparent" *ngIf="rules.length > 0" >    
-    <ng-container *ngFor="let ruler of rules" >
-      <app-rules-list-card [ruler]="ruler"></app-rules-list-card>
+   <ion-title size="large" color="light">Your Goals</ion-title>
+   <ion-list class="full-w bg-transparent" *ngIf="goals.length > 0" >    
+    <ng-container *ngFor="let goal of goals" >
+      <app-goals-list-card [goal]="goal"></app-goals-list-card>
     </ng-container>
   </ion-list>
 
 
-  <ng-container *ngIf="rules.length == 0" >
-    <app-no-register-yet [componentName]="'rules'"></app-no-register-yet>
+  <ng-container *ngIf="goals.length == 0" >
+    <app-no-register-yet [componentName]="'goals'"></app-no-register-yet>
   </ng-container>
   
 </ion-content>

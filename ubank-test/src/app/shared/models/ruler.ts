@@ -1,7 +1,7 @@
 import { Goal } from './goal';
 
 export interface Ruler {
-    goal: Goal;
+    goal: string;
     team?: string;
     event?: string;
     saving?: string;
