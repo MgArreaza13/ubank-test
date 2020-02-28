@@ -1,16 +1,20 @@
-<ion-header class="ion-no-border bg-gradient-orange">  
-  <ion-toolbar class="bg-transparent">        
-      <ion-title size="small"  color="light">Goals details</ion-title>    
+<ion-header class="ion-no-border bg-gradient-orange">
+  <ion-toolbar class="bg-transparent">
+    <ion-title size="small" color="light">Goals details</ion-title>
   </ion-toolbar>
-  <ion-toolbar class="bg-transparent">    
+  <ion-toolbar class="bg-transparent">
     <ion-title color="light" size="small" class="text-right">Here you can visualize your details of goals</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content class="bgi-solid-blue">
-  <ion-list class="bg-transparent">
+  <ion-list class="bg-transparent" *ngIf="rules.length > 0">
 
-    <ng-container *ngFor="let rule of rules" >
+    <ng-container *ngFor="let rule of rules">
       <app-goals-details-card [dataRuler]="rule"> </app-goals-details-card>
     </ng-container>
   </ion-list>
+
+  <ng-container>
+    <app-no-register-yet [componentName]="'register'"></app-no-register-yet>
+  </ng-container>
 </ion-content>

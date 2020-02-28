@@ -28,7 +28,6 @@ export class GoalsDetailsResultComponent implements OnInit {
   getDataFromTeam(id){
     this.teamService.getScheduledTeam(id).subscribe(
       (data:any) => {
-        console.log(data)
         this.results = data.matches;
       }, error => {
         console.log(error);
