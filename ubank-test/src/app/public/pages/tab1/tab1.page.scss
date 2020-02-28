@@ -1,3 +1,32 @@
-ion-content ion-toolbar {
-  --background: translucent;
+.mount {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 10px solid #222129;
+  color: white;
+  background: #222129;
+}
+ion-slide {
+  ion-card {
+    height: 39vw;
+  }
+}
+ion-card.goals {
+  background: #403e3e63;
+  border-radius: 1.5rem;
+  color: #f3f3f3;
+  margin: 0;
+  padding: 8px;
+  height: 7rem;
+  width: 6rem;
+}
+ion-list{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 12px;
+  ion-item.goal{
+    padding-inline-end: 0;
+    margin-bottom: 6px;
+    padding: 0;
+  }
 }
